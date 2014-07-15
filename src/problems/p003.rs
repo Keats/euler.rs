@@ -4,7 +4,7 @@ fn print_question() {
 	println!("What is the largest prime factor of the number 600851475143 ?");
 }
 
-fn get_prime_factors(mut n: int) -> int {
+fn get_largest_prime_factor(mut n: int) -> int {
 	let mut f = 2;
 
 	while f * f <= n {
@@ -20,6 +20,5 @@ fn get_prime_factors(mut n: int) -> int {
 
 pub fn solve()  {
 	print_question();
-	println!("> {}", get_prime_factors(600851475143));
-
+	println!("> {}", get_largest_prime_factor(600851475143));
 }
