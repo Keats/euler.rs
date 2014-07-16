@@ -1,4 +1,5 @@
 use std::iter::AdditiveIterator;
+use std::num;
 
 fn print_question() {
 	println!("Problem 6");
@@ -9,8 +10,7 @@ pub fn solve() {
 	print_question();
 
 	let sum_of_squares = range(1i, 101).map(|a| a * a).sum();
-	// seems a bit odd that only float have math operations
-	let square_of_sum = (range(1i, 101).sum() as f64).powi(2);
+	let square_of_sum = num::pow(range(1i, 101).sum(), 2);
 
-	println!("> {}", square_of_sum as int - sum_of_squares);
+	println!("> {}", square_of_sum - sum_of_squares);
 }
